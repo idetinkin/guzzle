@@ -101,7 +101,7 @@ class UriTemplate
         static $rfc1738to3986 = array('+' => '%20', '%7e' => '~');
 
         $replacements = array();
-        $parsed = self::parseExpression($matches[1]);
+        $parsed = $this->parseExpression($matches[1]);
         $prefix = self::$operatorHash[$parsed['operator']]['prefix'];
         $joiner = self::$operatorHash[$parsed['operator']]['joiner'];
         $useQuery = self::$operatorHash[$parsed['operator']]['query'];
